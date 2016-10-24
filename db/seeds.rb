@@ -5,7 +5,7 @@ companies_csv.shift
 companies_csv.each do |row|
   Image.create(
     status: row[1], 
-    row[2] == 'main' ? name: 0: name: 1,
+    row[2] == 'main' ? (name: 0) : (name: 1),
     image: row[3],
     products_id: row[4]
   )
