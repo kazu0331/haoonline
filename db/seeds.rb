@@ -8,7 +8,7 @@ companies_csv.each do |row|
     status: status, 
     name: row[2],
     image: row[3],
-    products_id: row[4]
+    product_id: row[4]
   )
 end
 
