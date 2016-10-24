@@ -1,16 +1,16 @@
 require "csv"
 
-companies_csv = CSV.readlines("db/images.csv")
-companies_csv.shift
-companies_csv.each do |row|
-  status = (row[2] == 'main') ? 0 : 1
-  Image.create(
-    status: status, 
-    name: row[2],
-    image: row[3],
-    product_id: row[4]
-  )
-end
+# companies_csv = CSV.readlines("db/images.csv")
+# companies_csv.shift
+# companies_csv.each do |row|
+#   status = (row[2] == 'main') ? 0 : 1
+#   Image.create(
+#     status: status, 
+#     name: row[2],
+#     image: row[3],
+#     product_id: row[4]
+#   )
+# end
 
 companies_csv = CSV.readlines("db/products.csv")
 companies_csv.shift
