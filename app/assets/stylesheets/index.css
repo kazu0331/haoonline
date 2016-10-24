@@ -65,21 +65,21 @@ div.user_nav{
 
 .image1{
   width: 467px;
-  height: 300px;
+  height: 400px;
   float: left;
   opacity: 0.5;
 }
 
 .image2{
   width: 467px;
-  height: 90px;
+  height:400px;
   float: left;
   opacity: 0.5;
 }
 
 .image3{
   width: 467px;
-  height: 90px;
+  height: 400px;
   float: left;
   opacity: 0.5;
 }
@@ -87,11 +87,20 @@ div.user_nav{
 
 .introduction{
   clear: both;
+  height: 300px;
   padding: 50px;
+  background-color: black;
 }
 
+.whats_hao{
+  color: white;
+  font-size: 30px;
+}
 
-
+.whats_haoo{
+  color: white;
+  font-size: 20px;
+}
 
 .clearfix:after {
   content: "";
