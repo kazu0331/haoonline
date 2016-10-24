@@ -3,9 +3,10 @@ require "csv"
 companies_csv = CSV.readlines("db/images.csv")
 companies_csv.shift
 companies_csv.each do |row|
+  status = (row[2] == 'main') ? 0 : 1
   Image.create(
-    status: row[1], 
-    row[2] == 'main' ? (name: 0) : (name: 1),
+    status: status, 
+    name: row[2],
     image: row[3],
     products_id: row[4]
   )
