@@ -1,0 +1,58 @@
+.name{
+  margin-right: 10px;
+  font-size: 30px;
+
+}
+
+.price{
+  text-align: right;
+  font-size: 30px;
+  padding-right: 100px;
+  padding-top: 50px
+
+}
+
+.detail_images{
+  width: 50%;
+  float: left;
+}
+
+.detail_explanation{
+  float: left;
+  width: 50%;
+  padding-top: 200px;
+  height: 1500px;
+}
+
+.hao_products{
+  width: 400px;
+  height: 400px;
+}
+
+#WP_checkoutBox{
+    text-align: right;
+    padding-right: 50px;
+    font-size: 30px;
+}
+
+#WP_checkoutBox input{
+    font-size: 30px;
+    height: 50px;
+}
+
+.webpay-button{
+    font-size: 30px;
+    height: 50px;
+}
+
+
+.JPY{
+  font-size: 20px;
+  margin-left: auto;
+}
+
+.clearfix:after {
+  content: "";
+  clear: both;
+  display: block;
+}

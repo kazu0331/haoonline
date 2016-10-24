@@ -1,0 +1,38 @@
+<div class="contents row">
+  <%= form_for @image do |f| %>
+    <h3>
+      投稿する
+    </h3>
+    <div>
+    <p>メイン画像</p>
+    <%= f.file_field :image %>
+    <%= f.hidden_field :status, value: "main" %>
+    </div>
+
+    <%= f.collection_select(:product_id, Product.all, :id, :product_name) %>
+
+    <input type="submit" value="SENT">
+  <% end %>
+  <%= form_for @image do |f| %>
+    <h3>
+      投稿する
+    </h3>
+    <div>
+    <p>サブ画像</p>
+    <%= f.label :image %>
+    <%#= f.file_field :image, name: "product_images[]", value: "1",multiple: true %>
+
+    <%#= f.label :image %>
+    <%#= f.file_field :image, name: "product_images[]", value: "1",multiple: true %>
+
+    <%#= f.label :image %>
+    <%#= f.file_field :image, name: "product_images[]", value: "1"multiple: true %>
+
+    <%= f.file_field :image %>
+    <%= f.hidden_field :status, value: "sub" %>
+
+    </div>
+     <%= f.collection_select(:product_id, Product.all, :id, :product_name) %>
+    <input type="submit" value="SENT">
+  <% end %>
+</div>

@@ -1,0 +1,5 @@
+<%= form_for @review do |f| %>
+ <%= f.hidden_field :product_id, value: @product.id %>
+ <%= f.text_area :review, :cols => 70, :rows => 10 %>
+ <%= f.submit 'Post your review' %>
+<% end %>

@@ -1,0 +1,37 @@
+ <div class="image1">
+    <%= image_tag 'type-x2.jpg', :size => "467x300", :alt => "sake" %>
+ </div>
+ <div class="image2">
+    <%= image_tag 'nishijin.jpg', :size => "467x300", :alt => "Nishijin-ori" %>
+ </div>
+ <div class="image3">
+    <%= image_tag '九谷焼.jpg', :size => "467x300", :alt => "Kutani yaki" %>
+ </div>
+
+ <div class="introduction">
+  <h3 class="whats_hao">What's Hao?</h3>
+    <p>The origin of “HaO” comes from the Chinese word “Hao/好”, meaning good, and the letter “O” is from the English word” OK “, meaning simply “good things” and HaO is our original brand name.<br>
+    Our products are high of quality with confidence, for they are made on a customer’s point of view, and most of them are not known by oversea customers. We are confident that they will enrich the customer’s lives. It is highly for recommendation.</p>
+ </div>
+ <%= image_tag 'sakura027.png', :size => "467x300", :alt => "Kutani yaki" %>
+
+
+  
+
+
+
+  
+  <div class="contents clearfix" >
+  <% @products.each do |product| %>
+    <div class="all_product">    
+      <p class="p_name"><%= product.product_name %></p>
+      <%= link_to image_tag("#{product.images.main[0].image}", class: "thumbnail"), "/products/#{product.id}" %>
+      <p><%= product.price + "JPY" %></p>
+          <ul class="more_list">
+            <li>
+              <%= link_to 'Details', "/products/#{product.id}", method: :get %>
+            </li>
+          </ul>
+    </div>
+  <% end %>
+ </div>

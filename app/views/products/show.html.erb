@@ -1,0 +1,53 @@
+<div class ="contents row">
+  <div class="content_post">
+    <%#{}" if user_signed_in?%>
+      <div class="name"><%= simple_format(@product.product_name) %></div>
+       <div class="price" ><%= @product.price + " JPY" %></div>
+
+     <div class="detail_images">
+       <% @product.images.sub.each do |i|%>
+        <%= image_tag("#{i.image}", class: "hao_products") %> 　
+       <% end %>
+     </div>
+     <%#picture#{i.id} %>
+
+     <div class="detail_explanation">
+       <div class="exp1"><%= simple_format(@product.explanation1) %></div>
+       <div class="exp2"><%= simple_format(@product.explanation2) %></div>
+       <div class="exp3"><%= simple_format(@product.explanation3) %></div>
+       <%= form_tag(action: :purchase, method: :post) do %>
+       <script src="https://checkout.webpay.jp/v1/" class="webpay-button" data-key="<%= WEBPAY_PUBLIC_KEY %>"></script>
+       <% end %>
+     </div>
+
+     <HR width="100%"></HR>
+
+     <div class="Review_form clearfix">
+       <h3>Write your review</h3>
+       <%= form_for @review do |f| %>
+         <%= f.hidden_field :product_id, value: @product.id %>
+         <%= f.text_area :review, :cols => 70, :rows => 10 %>
+         <%= f.submit 'Post your review' %>
+       <% end %>
+      <%# end %>
+            <%# if user_signed_in? && current_user.id == @review.user_id %>
+
+        <%# end %>
+
+      <HR width="100%"></HR>
+      <h3>Customer Reviews</h3>
+                  <% @product.reviews.each do |review| %>
+                  <li style="border-bottom: dotted 1px">
+                    <div class="thumbnail__caption">
+                      <p>
+                        <%= review.review %>
+                      </p>
+                      <%= link_to "delete", review_path(review), method: :delete %>
+                      <%= link_to "edit", edit_review_path(review) %>
+                    </div>
+                  </li>
+                  <% end %>
+      </div>
+  </div>
+</div>
+
