@@ -7,34 +7,8 @@
   <%= csrf_meta_tags %>
 </head>
 <body>
-  <header>
-    <div class="header_bar">
-      <div class="logo">
-       <%= image_tag 'logo.png', :size => "50x50" %>
-      </div>
-      <h1 class = "title"><a href="/">Hao Online Gift</a></h1>
-   </div>
-     <% if user_signed_in? %>
-        <div class="user_nav">
-          <%= link_to "Log out", destroy_user_session_path, method: :delete %>
-            <% if current_user.permission == 1 %>
-              <%= link_to "Admin", admins_path, method: :get %>
-            <% end %>
-        </div>
-     <%else %>
-        <div class="user_nav">
-            <%= link_to "Log in", new_user_session_path, class: 'post' %>
-            <%= link_to "Registration", new_user_registration_path, class: 'post' %>
-        </div>
-     <% end %>
-  </header>
-
 
 <%= yield %>
 
 </body>
-
-<footer>
-  <p class="footer">Copyright © 2016 COOL JAPAN TRADING Co., Ltd. All rights reserved</p>
-</footer>
 </html>
