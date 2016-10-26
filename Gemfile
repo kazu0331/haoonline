@@ -48,3 +48,7 @@ group :development do
   gem 'spring'
 end
 
+gem 'devise'
+gem 'webpay'
+gem 'carrierwave'
+gem 'pry-rails'
