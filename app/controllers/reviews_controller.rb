@@ -1,5 +1,6 @@
 class ReviewsController < ApplicationController
   before_action :review_set, only: [:destroy, :update]
+  before_action :authenticate_user!
 
   def create
     @review = Review.create(review_params)
