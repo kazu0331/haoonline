@@ -170,6 +170,11 @@ h1.title{
   width: 40%;
   float: left;
 }
+
+ul{
+  list-style: none;
+}
+
 li{
   list-style: none;
 }
