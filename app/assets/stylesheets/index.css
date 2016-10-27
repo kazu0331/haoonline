@@ -27,11 +27,12 @@ h1{
 }
 
 h1.title{
+
   font-size: 30px;
   font: serif;
   color: yellow;
   width: 50%;
-
+  float: left;
 }
 
 .title:visited{
@@ -49,13 +50,43 @@ image.logo{
   height: 200px;
 }
 
-.sub_title{
+#sub_title{
   text-align: center;
+  padding: 50px;
+  font-size: 30px;
+}
+
+#menu div{
+  float: left;
+}
+
+#menu li{
+  float: left;
+  
+ 
+}
+
+#menu li a{
+display: block; 
+padding: 3px;
+text-decoration: none;
+color: #333;
+margin: 5px;
+text-align: center;
+font-size: 17px;
+text-decoration: underline;
+}
+
+#menu li a:hover{
+background-color: orange;
+color: #fff;
 }
 
 .all_product{
   width: 33.333333333%;
   float:left;
+  text-align: center;
+  padding-bottom: 50px;
 
 }
 
@@ -68,24 +99,28 @@ image.logo{
 
 .user_nav{
   text-align: right;
+  float: right;
+  font-size: 17px;
+
 }
 
+
+
 .image1{
-  width: 467px;
   height: 400px;
   float: left;
   opacity: 0.5;
+  display: table-cell;
 }
 
 .image2{
-  width: 467px;
   height:400px;
   float: left;
   opacity: 0.5;
+  display: table-cell;
 }
 
 .image3{
-  width: 467px;
   height: 400px;
   float: left;
   opacity: 0.5;
@@ -94,12 +129,11 @@ image.logo{
 
 .introduction{
   clear: both;
-  height: 300px;
   padding: 50px;
   background-color: black;
 }
 
-.whats_hao{
+#whats_hao{
   color: white;
   font-size: 30px;
 }
@@ -107,6 +141,11 @@ image.logo{
 .whats_haoo{
   color: white;
   font-size: 20px;
+}
+
+.contents{
+  width: 100%;
+
 }
 
 .clearfix:after {
@@ -118,4 +157,46 @@ image.logo{
 .footer{
   text-align: center;
   background-color: #DDDDDD;
+}
+
+
+@media screen and ( max-width:479px ){
+
+h1.title{
+
+  font-size: 20px;
+  font: serif;
+  color: yellow;
+  width: 40%;
+  float: left;
+}
+
+#menu li a{
+display: block; 
+padding: 3px;
+text-decoration: none;
+color: #333;
+margin: 5px;
+text-align: center;
+font-size: 10px;
+text-decoration: underline;
+}
+
+.user_nav{
+  text-align: right;
+  float: right;
+  font-size: 10px;
+
+}
+
+.all_product{
+  width: 100%;
+  float:left;
+
+}
+
+.introduction{
+  
+}
+
 }

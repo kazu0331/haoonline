@@ -11,14 +11,14 @@
  </div>
 
  <div class="introduction" style="background-image: url('/assets/sakura027.png');">
-  <h3 class="whats_hao">What's Hao?</h3>
+  <h3 id="whats_hao">What's Hao?</h3>
     <p class="whats_haoo">
       The origin of “HaO” comes from the Chinese word “Hao/好”, meaning good, and the letter “O” is from the English word” OK “, meaning simply “good things” and HaO is our original brand name.<br>
       Our products are high of quality with confidence, for they are made on a customer’s point of view, and most of them are not known by oversea customers. We are confident that they will enrich the customer’s lives. It is highly for recommendation.
     </p>
  </div>
 
-<h2 class="sub_title clearfix"> Products</h2>
+<h2 id="sub_title"> Products</h2>
   
   <div class="contents clearfix" >
   <% @products.each do |product| %>
@@ -37,3 +37,26 @@
 
   <% end %>
  </div>
+
+<!-- jQuery.jsの読み込み -->
+<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.3.2/jquery.min.js"></script>
+
+<!-- スムーズスクロール部分の記述 -->
+<script>
+$(function(){
+   // #で始まるアンカーをクリックした場合に処理
+   $('a[href^=#]').click(function() {
+      // スクロールの速度
+      var speed = 400; // ミリ秒
+      // アンカーの値取得
+      var href= $(this).attr("href");
+      // 移動先を取得
+      var target = $(href == "#" || href == "" ? 'html' : href);
+      // 移動先を数値で取得
+      var position = target.offset().top;
+      // スムーススクロール
+      $('body,html').animate({scrollTop:position}, speed, 'swing');
+      return false;
+   });
+});
+</script>

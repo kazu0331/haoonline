@@ -56,3 +56,30 @@
   clear: both;
   display: block;
 }
+
+
+
+@media screen and ( max-width:479px ){
+
+.name{
+  font-size: 18px;
+
+}
+
+
+.price{
+  text-align: right;
+  font-size: 18px;
+
+}
+
+.detail_images{
+  width: 100%;
+  float: left;
+}
+
+.detail_explanation{
+  width: 100%;
+}
+
+}
