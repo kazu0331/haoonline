@@ -171,6 +171,12 @@ li{
 
 }
 
+
+.details{
+  margin-top: 7px;
+}
+
+
 .clearfix:after {
   content: "";
   clear: both;
