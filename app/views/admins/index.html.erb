@@ -1,10 +1,7 @@
 <div class="contents row">
   <%= form_for @image do |f| %>
-    <h3>
-      投稿する
-    </h3>
     <div>
-    <p>メイン画像</p>
+    <p class="admin-image">メイン画像</p>
     <%= f.file_field :image %>
     <%= f.hidden_field :status, value: "main" %>
     </div>

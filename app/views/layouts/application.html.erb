@@ -41,12 +41,10 @@ $(function() {
         <h1 class = "title"><a href="/">Hao Online Gift</a></h1>
         <div id="menu">
           <ul>
-              <li><a href="#whats_hao">What's HaO?</a></li>
-              <li><a href="#sub_title">Products</a></li>
-              <li>
-        
+              <li><a href="/products#whats_hao" class="menu1">What's HaO?</a></li>
+              <li><a href="/products#sub_title" class="menu2">Products</a></li>
                  <% if user_signed_in? %>
-                    <div class="user_nav">
+                    <div class="user_nav ">
                       <%= link_to "Log out", destroy_user_session_path, method: :delete %>
                         <% if current_user.permission == 1 %>
                           <%= link_to "Admin", admins_path, method: :get %>
@@ -67,7 +65,7 @@ $(function() {
   </header>
   <%= yield %>
   <footer>
-    <p class="footer">Copyright © 2016 COOL JAPAN TRADING Co., Ltd. All rights reserved</p>
+  <div class="footer"><p>Copyright © 2016 COOL JAPAN TRADING Co., Ltd. All rights reserved</p></div>
   </footer>
 
 </body>
