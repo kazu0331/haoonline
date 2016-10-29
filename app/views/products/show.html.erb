@@ -12,12 +12,14 @@
      <%#picture#{i.id} %>
 
      <div class="detail_explanation">
+       <div class="webpay">
+         <%= form_tag(action: :purchase, method: :post) do %>
+         <script src="https://checkout.webpay.jp/v1/" class="webpay-button" data-key="<%= WEBPAY_PUBLIC_KEY %>"></script>
+         <% end %>
+       </div>
        <div class="exp1"><%= simple_format(@product.explanation1) %></div>
        <div class="exp2"><%= simple_format(@product.explanation2) %></div>
        <div class="exp3"><%= simple_format(@product.explanation3) %></div>
-       <%= form_tag(action: :purchase, method: :post) do %>
-       <script src="https://checkout.webpay.jp/v1/" class="webpay-button" data-key="<%= WEBPAY_PUBLIC_KEY %>"></script>
-       <% end %>
      </div>
 
      <HR width="100%"></HR>

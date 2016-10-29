@@ -1,14 +1,27 @@
 <div>
    <div class="image1">
-      <%= image_tag 'type-x2.jpg', :size => "467x400", :alt => "sake" %>
+      <p id="slideshow">
+        <%= image_tag 'type-x2.jpg', :size => "467x400", :alt => "sake", class: "active" %>
+        <%= image_tag '石鹸1.jpg', :size => "467x400", :alt => "Nishijin-ori" %>
+        <%= image_tag '静岡お茶1.jpg', :size => "467x400", :alt => "Kutani yaki" %>
+      </p>
    </div>
    <div class="image2">
-      <%= image_tag 'nishijin.jpg', :size => "467x400", :alt => "Nishijin-ori" %>
+      <p id="slideshow">
+        <%= image_tag 'nishijin.jpg', :size => "467x400", :alt => "sake", class: "active" %>
+        <%= image_tag 'type-s2.jpg', :size => "467x400", :alt => "Nishijin-ori" %>
+        <%= image_tag 'KU1.jpg', :size => "467x400", :alt => "Kutani yaki" %>
+      </p>
    </div>
    <div class="image3">
-      <%= image_tag '九谷焼.jpg', :size => "467x400", :alt => "Kutani yaki" %>
+      <p id="slideshow">
+        <%= image_tag '九谷焼.jpg', :size => "467x400", :alt => "sake", class: "active" %>
+        <%= image_tag 'edokiriko2.jpg', :size => "467x400", :alt => "Nishijin-ori" %>
+        <%= image_tag 'お香.jpg', :size => "467x400", :alt => "Kutani yaki" %>
+      </p>
    </div>
  </div>
+
 
  <div class="introduction" style="background-image: url('/assets/sakura027.png');">
   <h3 id="whats_hao">What's Hao?</h3>
