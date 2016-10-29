@@ -20,7 +20,16 @@
 }
 
 
+.product_logo {
+  float: left;
+  opacity: 0.5;
+}
 
+.product_logo_first {
+  float: left;
+  opacity: 0.5;
+  clear: both;
+}
 
 .logo{
   float: left;
@@ -29,7 +38,7 @@
 
 div.header_bar{
   background-color: #E6FFE9;
-  height: 150px;
+  height: 80px;
 }
 
 h1{
@@ -171,6 +180,9 @@ li{
 
 }
 
+#menu {
+  margin-right: 0;
+}
 
 .details{
   margin-top: 7px;
@@ -190,6 +202,22 @@ li{
 
 
 @media screen and ( max-width:479px ){
+
+.product_logo {
+  width: 100%;
+  opacity: 0.5;
+}
+
+
+.product_logo_first {
+  width: 100%;
+  opacity: 0.5;
+}
+
+div.header_bar{
+  background-color: #E6FFE9;
+  height: 150px;
+}
 
 .sp-clearfix:after {
   content: "";
