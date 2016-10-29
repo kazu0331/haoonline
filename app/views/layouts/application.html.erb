@@ -31,8 +31,10 @@
                     </div>
                  <%else %>
                     <div class="user_nav">
-                        <%= link_to "Log in", new_user_session_path, class: 'post' %>
-                        <%= link_to "Registration", new_user_registration_path, class: 'postt' %>
+                      <ul>
+                          <li><%= link_to "Log in", new_user_session_path, class: 'post' %></li>
+                          <li><%= link_to "Registration", new_user_registration_path, class: 'regist' %></li>
+                      </ul>
                     </div>
                  <% end %>
              </li>
