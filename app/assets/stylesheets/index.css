@@ -22,7 +22,7 @@ h1{
   margin: 0px 0px 0px 0px;
 }
 .post{
-
+float: left;
   text-align: right;
 }
 
@@ -47,7 +47,7 @@ image.logo{
 
 .thumbnail{
   width: 200px;
-  height: 200px;
+  height: 250px;
 }
 
 #sub_title{
@@ -80,6 +80,18 @@ text-decoration: underline;
 #menu li a:hover{
 background-color: orange;
 color: #fff;
+}
+
+ul{
+  list-style: none;
+}
+
+li{
+  list-style: none;
+}
+
+.postt{
+  width: 190px;
 }
 
 .all_product{
@@ -145,6 +157,7 @@ color: #fff;
 
 .contents{
   width: 100%;
+  height: auto;
 
 }
 
