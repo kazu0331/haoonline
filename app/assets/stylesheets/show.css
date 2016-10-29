@@ -79,6 +79,12 @@
 
 @media screen and ( max-width:479px ){
 
+.clearfix:after {
+  content: "";
+  clear: both;
+  display: block;
+}
+
 .name{
   font-size: 18px;
 
